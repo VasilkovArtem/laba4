@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style/style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="button">
+    <div class="button1"><a href="#" onClick="document.getElementById('first').style.display =  'block'; document.getElementById('second').style.display =  'none'; document.getElementById('third').style.display =  'none'; document.getElementById('four').style.display =  'none'">Раз</a></div>
+    <div class="button2"><a href="#" onClick="document.getElementById('second').style.display =  'block'; document.getElementById('first').style.display =  'none'; document.getElementById('third').style.display =  'none'; document.getElementById('four').style.display =  'none'">Два</a></div>
+    <div class="button3"><a href="#" onClick="document.getElementById('third').style.display =  'block'; document.getElementById('first').style.display =  'none'; document.getElementById('second').style.display =  'none'; document.getElementById('four').style.display =  'none'">Три</a></div>
+    <div class="button4"><a href="#" onClick="document.getElementById('four').style.display =  'block'; document.getElementById('first').style.display =  'none'; document.getElementById('second').style.display =  'none'; document.getElementById('third').style.display =  'none'">Четыре</a></div>
+  </div>
+
+  <div id="first" style="display:none">
+    <div class="task1">
+
+      <div class="outputtt">
+        <div class="inputField" id="list">
+        </div>
+      </div>
+
+      <div class="incut">
+        <label class="radio"><input type="radio" name="positionInList" id="addTop" class="radioButton">At the beginning</label>
+        <br/>
+        <label class="radio"><input type="radio" name="positionInList" id="addBottom" class="radioButton">At the end</label>
+        <br/>
+        <input type="text" id="typedText">
+        <br/>
+        <p class="chooseColor">Choose color</p>
+        <input type="color" id="colorText" value="#ff0000">
+        <br/>
+        <button onclick="getText()" class="addButton">Add</button>
+        <br/>
+        <button onclick="alertText()" class="stats">Stats</button>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <div id="second" style="display:none">
+    <div class="task2">
+
+      <div class="output">
+        <div class="fieldInput" id="task2"></div>
+      </div>
+
+      <div class="incut2">
+        <button onclick="addRectangle()" class="addShape">Add</button>
+        <button onclick="removeChild" class="addShape">Clear</button>
+      </div>  
+
+    </div>
+  </div>
+
+
+
+
+
+  <div id="third" style="display:none">
+    <div class="task3">
+
+      <div class="outputt">
+        <div id="task3"></div>
+      </div>
+      <div class="incut3 ">
+          <button onclick="addBlock()" class="addShape ">Add</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="four" style="display:none">
+    <div class="task4">
+
+      <div class="output1"  >
+        <div class="fieldInput1" id="task4" ></div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+    <script src="script/task1.js "></script>
+    <script src="script/task2.js "></script>
+    <script src="script/task3.js "></script>
+    <script src="script/task4.js "></script>
+</body>
+</html>
